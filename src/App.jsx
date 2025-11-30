@@ -1,25 +1,52 @@
-import { Browser } from '@syncfusion/ej2-base';
-import './App.css'
-import { useStateContext } from './contexts/contextProvider'
-import { BrowserRouter } from 'react-router-dom';
+import { Browser } from "@syncfusion/ej2-base";
+import "./App.css";
+import { useStateContext } from "./contexts/contextProvider";
+import { BrowserRouter } from "react-router-dom";
+import { FiSettings } from "react-icons/fi";
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import Sidebar from "./components/sidebar";
 
 function App() {
-
-  const [activeMenu, themeSettings, isClicked, currentColor, currentMode] = useStateContext();
-  
+  const { activeMenu, themeSettings, isClicked, currentColor, currentMode } =
+    useStateContext();
 
   return (
-    <div className={currentMode === "Dark" ? "dark" : ""} >
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
-      <div className='flex relative dark:bg-main-dark-bg'></div>
-      <div className='fixed left-4 bottom-4 z-[10000]'></div>
-      <button type='button' className='text-3xl p-3 hover:drop-shadow-xl
-      hover:bg-light-grey text-white' style={{background : currentColor, borderRadius: "50%"}} 
-      onClick={() => { setthemeSettings(true)}}></button>
+        <div className="flex relative dark:bg-main-dark-bg">
+          <div className="fixed left-4 bottom-4 z-[10000]">
+            <TooltipComponent content="تنظیمات" position="TopRight">
+              <button
+                type="button"
+                className="text-3xl p-3 hover:drop-shadow-xl
+                hover:bg-light-grey text-white"
+                style={{ background: currentColor, borderRadius: "50%" }}
+                onClick={() => {
+                  setthemeSettings(true);
+                }}
+              >
+                <FiSettings />
+              </button>
+            </TooltipComponent>
+          </div>
+          {activeMenu ? (
+            <div
+              className={`w-72 fixed shrink-0  z-[${
+                isClicked.cart ? "10" : "10009"
+              }]
+            dark:bg-secendary-dark-bg bg-white`}
+            >
+              <Sidebar />
+            </div>
+          ) : (
+            <div className=" w-0 dark:bg-secendary-dark-bg ">
+              <Sidebar />
+            </div>
+          )}
+        </div>
       </BrowserRouter>
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
