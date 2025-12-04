@@ -1,4 +1,4 @@
-import React from 'react'; // React را ایمپورت کنید
+import React from "react";    
 import { useStateContext } from "../contexts/contextProvider";
 import { Link, NavLink } from "react-router-dom";
 import { SlPuzzle } from "react-icons/sl";
@@ -7,7 +7,8 @@ import { MdOutlineCancel } from "react-icons/md";
 import { links } from "../data/dummy";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext();
 
   const handleCloseSideBar = () => {
     if (activeMenu && screenSize <= 1024) {
@@ -30,8 +31,7 @@ const Sidebar = () => {
               onClick={handleCloseSideBar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-bold tracking-tight dark:text-white text-slate-900"
             >
-              
-              <SlPuzzle className="text-xl" /> <span>پازل</span>
+              <SlPuzzle className="text-xl" /> <span>پنل کاربری</span>
             </Link>
             <TooltipComponent content="بستن منو" position="BottomCenter">
               <button
@@ -43,17 +43,14 @@ const Sidebar = () => {
               </button>
             </TooltipComponent>
           </div>
-          
-          
+
           <div className="mt-10">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 m-3 mt-4 uppercase">
-                  {item.title}
-                </p>
+                <p className="text-gray-400 m-3 mt-4 uppercase">{item.title}</p>
                 {item.links.map((link) => (
                   <NavLink
-                    to={`/${link.name}`} 
+                    to={`/${link.name}`}
                     key={link.name}
                     onClick={handleCloseSideBar}
                     style={({ isActive }) => ({
@@ -63,11 +60,8 @@ const Sidebar = () => {
                       isActive ? activeLink : normalLink
                     }
                   >
-                    
                     {link.icon}
-                    <span className="capitalize">
-                      {link.name}
-                    </span>
+                    <span className="capitalize">{link.name}</span>
                   </NavLink>
                 ))}
               </div>
