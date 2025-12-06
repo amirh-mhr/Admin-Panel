@@ -15,7 +15,7 @@ function App() {
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-          <div className="fixed left-4 bottom-4 z-[10000]">
+          <div className="fixed left-4 bottom-4 z-10000">
             <TooltipComponent content="تنظیمات" position="TopRight">
               <button
                 type="button"
