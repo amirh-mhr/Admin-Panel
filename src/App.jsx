@@ -7,7 +7,6 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import Sidebar from "./components/sidebar";
 import Navbar from "./components/Navbar";
 
-
 function App() {
   const { activeMenu, themeSettings, isClicked, currentColor, currentMode } =
     useStateContext();
