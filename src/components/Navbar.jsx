@@ -6,13 +6,13 @@ import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 
-const NavButton = ({ title, cunstomFunc, icon, color, dotColor }) => (
+const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
       className="relative text-xl rounded-full p-3 hover:bg-gray-100"
       type="button"
       style={{ color }}
-      onClick={cunstomFunc}
+      onClick={customFunc}
     >
       <span
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
@@ -51,24 +51,24 @@ function Navbar() {
       
         <NavButton
           title="منو"
-          cunstomFunc={() => setActiveMenu((prev) => !prev)}
+          customFunc={() => setActiveMenu((prev) => !prev)}
           color={currentColor}
           icon={<AiOutlineMenu />}
         />
       
       <div className=" flex flex-row-reverse">
         <NavButton title="سبد خرید"
-        cunstomFunc={() => handleClick("cart")}
+        customFunc={() => handleClick("cart")}
         color={currentColor}
         icon={<FiShoppingCart/>}/>
 
         <NavButton title=" چت"
-        cunstomFunc={() => handleClick("chat")}
+        customFunc={() => handleClick("chat")}
         color={currentColor}
         icon={<BsChatLeft/>}/>
 
         <NavButton title=" اطلاع رسانی"
-        cunstomFunc={() => handleClick("notification")}
+        customFunc={() => handleClick("notification")}
         color={currentColor}
         icon={<RiNotification3Line/>}/>
 
