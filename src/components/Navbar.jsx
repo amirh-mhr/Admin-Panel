@@ -5,6 +5,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
+import Chat from "./Chat";
+import Cart from "./cart";
+import Notification from "./notification";
+import UserProfile from "./UserProfile";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
@@ -71,6 +75,12 @@ function Navbar() {
         customFunc={() => handleClick("notification")}
         color={currentColor}
         icon={<RiNotification3Line/>}/>
+
+
+        {isClicked.Cart && <Cart /> }
+        {isClicked.Chat && <Chat /> }
+        {isClicked.Notification && <Notification /> }
+        {isClicked.UserProfile && <UserProfile /> }
 
        
       </div>

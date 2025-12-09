@@ -1,6 +1,6 @@
 
 
-const Notification = () => {
+const notification = () => {
 
 
     return (
@@ -11,4 +11,4 @@ const Notification = () => {
 }
 
 
-export default Notification
+export default notification
