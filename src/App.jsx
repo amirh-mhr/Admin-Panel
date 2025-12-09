@@ -8,7 +8,7 @@ import Sidebar from "./components/sidebar";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const { activeMenu, themeSettings, isClicked, currentColor, currentMode } =
+  const { activeMenu, themeSettings, isClicked, currentColor, currentMode, setThemeSettings } =
     useStateContext();
 
   return (
@@ -23,7 +23,7 @@ function App() {
                 hover:bg-light-grey text-white"
                 style={{ background: currentColor, borderRadius: "50%" }}
                 onClick={() => {
-                  setthemeSettings(true);
+                  setThemeSettings(true);
                 }}
               >
                 <FiSettings />
