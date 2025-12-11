@@ -7,6 +7,8 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import Sidebar from "./components/sidebar";
 import Navbar from "./components/Navbar";
 import FileCkeck from "./components/FIleCheck";
+import Nurses from "./components/Nurses";
+import Doctors from "./components/Doctors";
 
 function App() {
   const {
@@ -61,8 +63,10 @@ function App() {
             <div>
               <Routes>
                 <Route path="/" element="صفحه اصلی" />
-                <Route path="/ecommerce" element="ضفحه اصلی" />
+                <Route path="/ecommerce" element="صفحه اصلی" />
                 <Route path="/file-check" element={<FileCkeck />} />
+                <Route path="/doctors" element={<Doctors />} />
+                <Route path="/nurses" element={<Nurses />} />
               </Routes>
             </div>
           </div>
