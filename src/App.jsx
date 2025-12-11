@@ -1,15 +1,22 @@
 import { Browser } from "@syncfusion/ej2-base";
 import "./App.css";
 import { useStateContext } from "./contexts/contextProvider";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import Sidebar from "./components/sidebar";
 import Navbar from "./components/Navbar";
+import FileCkeck from "./components/FIleCheck";
 
 function App() {
-  const { activeMenu, themeSettings, isClicked, currentColor, currentMode, setThemeSettings } =
-    useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    isClicked,
+    currentColor,
+    currentMode,
+    setThemeSettings,
+  } = useStateContext();
 
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>
@@ -50,6 +57,13 @@ function App() {
           >
             <div className="sticky top-0 left-0 bg-main-bg dark:bg-main-dark Navbar">
               <Navbar />
+            </div>
+            <div>
+              <Routes>
+                <Route path="/" element="صفحه اصلی" />
+                <Route path="/ecommerce" element="ضفحه اصلی" />
+                <Route path="/file-check" element={<FileCkeck />} />
+              </Routes>
             </div>
           </div>
         </div>
