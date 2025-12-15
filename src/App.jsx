@@ -62,8 +62,6 @@ function App() {
             </div>
             <div>
               <Routes>
-                <Route path="/" element="صفحه اصلی" />
-                <Route path="/ecommerce" element="صفحه اصلی" />
                 <Route path="/file-check" element={<FileCkeck />} />
                 <Route path="/doctors" element={<Doctors />} />
                 <Route path="/nurses" element={<Nurses />} />

@@ -106,7 +106,34 @@ const FileCkeck = () => {
                 </button>
               </div>
             </div>
-            {/*az inja shoro kn*/}
+            {expandedRow === item.id && (
+
+              <div className="bg-indigo-50 p-6 border-t animate-fade-in-down">
+
+              <h4 className="font-bold text-indigo-800 mb-3 text-sm">گزارش هوش مصنوعی:</h4>
+                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+
+                  {item.aiAnalysis.map((detail, index) => {
+                    <div key={index} className="lex justify-between p-3 border-b last:border-none text-sm">
+                      <span className="font-semibold text-gray-700">{detail.page}</span>
+                            <span className={detail.status === 'ناقص' ? 'text-red-500' : 'text-green-500'}>
+                                {detail.status}
+                            </span>
+                            <span className="text-gray-500">{detail.reason}</span>
+                    </div>
+                  })}
+
+                </div>
+                
+               <div className="mt-4 flex justify-end">
+                    <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700 transition">
+                        مشاهده اسکن مدارک
+                    </button>
+                </div> 
+
+              </div>
+                
+            )}
           </div>
         ))}
       </div>
