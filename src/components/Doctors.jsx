@@ -4,28 +4,28 @@ import { FaUserDoctor } from "react-icons/fa6";
 
 const DoctorsList = [
   {
-    id: 1,
+    
     DoctorName: "رضا علوی",
     Medicalsystemcode: "12456",
     specialty: "متخصص قلب و عروق",
-    avatar: "/images/doctors1.jpg",
+    avatar: "./images/doc1.jpg",
   },
   {
-    id: 1,
+    
     DoctorName: "رضا علوی",
     Medicalsystemcode: "12456",
     specialty: "متخصص قلب و عروق",
     avatar: "./images/doctors1.jpg",
   },
   {
-    id: 1,
+   
     DoctorName: "رضا علوی",
     Medicalsystemcode: "12456",
     specialty: "متخصص قلب و عروق",
     avatar: "/images/doctors1.jpg",
   },
   {
-    id: 1,
+    
     DoctorName: "رضا علوی",
     Medicalsystemcode: "12456",
     specialty: "متخصص قلب و عروق",

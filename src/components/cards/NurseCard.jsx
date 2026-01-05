@@ -4,13 +4,13 @@ import PersonCard from "./PersonCard";
 
 
 
-import PersonCard from "./PersonCard";
 
-function NurseCard({ isSupervisor, nursingCode, ...props }) {
+
+function NurseCard({ specialty, nursingCode, ...props }) {
   return (
     <PersonCard
       {...props}
-      subtitle={isSupervisor ? "سوپروایزر بخش" : "پرستار"}
+      subtitle={specialty}
       licenseLabel="نظام پرستاری"
       licenseCode={nursingCode}
     />
