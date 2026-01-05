@@ -63,7 +63,7 @@ const FileCheck = () => {
         <div>
           <p className="text-gray-400">پنل هوشمند</p>
           <p className="text-3xl font-extrabold tracking-tight text-slate-900">
-            بررسی نواقص پرونده‌ها
+               بررسی نواقص پرونده‌ها              
           </p>
         </div>
       </div>

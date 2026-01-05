@@ -6,7 +6,7 @@ import App from "./App.jsx";
 import { registerLicense } from "@syncfusion/ej2-base";
 import { ContextProvider } from "./contexts/contextProvider";
 registerLicense(
-  "Ngo9BigBOggjGyl/Vkd+XU9FcVRDX3xLeUx0RWFcb19yflZFallYVBYiSV9jS3tSd0dqWH9fc3RdT2BfWE91Xg=="
+  "Ngo9BigBOggjHTQxAR8/V1JGaF5cXGpCfExyWmFZfVhgc19HZ1ZTQGYuP1ZhSXxVdkRjXH9ZcXNXTmdcUkN9XEA="
 );
 
 createRoot(document.getElementById("root")).render(
