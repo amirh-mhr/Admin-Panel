@@ -1,7 +1,7 @@
 import React from "react";
 import { useStateContext } from "../contexts/contextProvider";
 import { Link, NavLink } from "react-router-dom";
-import { SlPuzzle } from "react-icons/sl";
+import { RiFileCheckLine } from "react-icons/ri";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { MdOutlineCancel } from "react-icons/md";
 import { links } from "../data/dummy";
@@ -31,7 +31,7 @@ const Sidebar = () => {
               onClick={handleCloseSideBar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-bold tracking-tight dark:text-white text-slate-900"
             >
-              <SlPuzzle className="text-xl" /> <span>پنل کاربری</span>
+              <RiFileCheckLine className="text-5xl" /> <span>سامانه هوشمند رفع نقص پرونده بیماران </span>
             </Link>
             <TooltipComponent content="بستن منو" position="BottomCenter">
               <button
