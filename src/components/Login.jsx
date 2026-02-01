@@ -8,7 +8,7 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
 
-    if  ( username === "admin" && password === "1234" ) {
+    if  ( username === "1234" && password === "1234" ) {
         onLogin()
     } else {
         setError("نام کاربری یا رمز عبور اشتباه است!")
