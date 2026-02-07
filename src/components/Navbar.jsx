@@ -3,7 +3,7 @@ import { useStateContext } from "../contexts/contextProvider";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoExitOutline } from "react-icons/io5"; 
-import { RiNotification3Line } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
 import Chat from "./Chat";
 import Cart from "./cart";
 import Notification from "./notification";
@@ -69,7 +69,7 @@ const Navbar = ({ onLogout }) => {
   const shamsiTime = currentDateTime.toLocaleTimeString('fa-IR', timeOptions);
 
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative shadow-sm dark:shadow-gray-800 shadow-gray-200">
+    <div className="flex justify-between p-3 md:mx-13 relative shadow-sm dark:shadow-gray-600 ">
       
       <NavButton
         title="منو"
@@ -89,10 +89,10 @@ const Navbar = ({ onLogout }) => {
         />
 
         <NavButton
-          title="اطلاع رسانی"
+          title="پروفایل"
           customFunc={() => handleClick("notification")}
           color={currentColor}
-          icon={<RiNotification3Line />}
+          icon={<CgProfile />}
         />
 
         
