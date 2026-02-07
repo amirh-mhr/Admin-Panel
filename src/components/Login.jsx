@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaUserDoctor } from "react-icons/fa6";
+import { RiFileCheckLine } from "react-icons/ri";
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -8,10 +9,12 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
 
-    if  ( username === "1234" && password === "1234" ) {
+    if  ( username === "1234"  && password === "1234" ) {
         onLogin()
-    } else {
+    } else { 
+        
         setError("نام کاربری یا رمز عبور اشتباه است!")
+       
     }
 
   };
@@ -24,7 +27,7 @@ const Login = ({ onLogin }) => {
         
         <div className="flex flex-col items-center mb-8">
           <div className="w-20 h-20 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4">
-             <FaUserDoctor size={40} />
+             <RiFileCheckLine size={40} />
           </div>
           <h1 className="text-3xl font-extrabold text-slate-800">سامانه هوشمند بیماران  </h1>
           <p className="text-gray-500 mt-2">لطفاً برای ورود اطلاعات را وارد کنید</p>
