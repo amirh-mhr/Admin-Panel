@@ -69,7 +69,7 @@ const Navbar = ({ onLogout }) => {
   const shamsiTime = currentDateTime.toLocaleTimeString('fa-IR', timeOptions);
 
   return (
-    <div className="flex justify-between p-3 md:mx-13 relative shadow-sm dark:shadow-gray-600 ">
+    <div className=" m-5 rounded-3xl flex justify-between p-3 md:mx-13 relative shadow-sm bg-stone-100 dark:shadow-gray-600 ">
       
       <NavButton
         title="منو"

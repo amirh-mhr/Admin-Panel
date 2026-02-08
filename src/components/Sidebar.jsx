@@ -31,7 +31,7 @@ const Sidebar = () => {
               onClick={handleCloseSideBar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-bold tracking-tight dark:text-white text-slate-900"
             >
-              <RiFileCheckLine className="text-5xl" /> <span>سامانه هوشمند رفع نقص پرونده بیماران </span>
+              <RiFileCheckLine className="text-6xl mt-4 text-center" /> <span className="text-1xl">سامانه هوشمند رفع نقص پرونده بیماران </span>
             </Link>
             <TooltipComponent content="بستن منو" position="BottomCenter">
               <button
