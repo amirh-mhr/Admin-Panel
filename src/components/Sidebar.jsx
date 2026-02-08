@@ -22,7 +22,7 @@ const Sidebar = () => {
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray text-md m-2 ";
 
   return (
-    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 bg-[#3f3f3f]!">
+    <div className=" h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 bg-slate-800">
       {activeMenu && (
         <>
           <div className="flex justify-between items-center ">
@@ -44,10 +44,10 @@ const Sidebar = () => {
             </TooltipComponent>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 ">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 m-3 mt-4 uppercase ">
+                <p className="text-stone-100 m-3 mt-4 uppercase ">
                   {item.title}
                 </p>
                 {item.links.map((link) => (

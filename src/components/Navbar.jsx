@@ -90,22 +90,20 @@ const Navbar = ({ onLogout }) => {
 
         <NavButton
           title="پروفایل"
-          customFunc={() => handleClick("notification")}
+          onClick={UserProfile}
           color={currentColor}
           icon={<CgProfile />}
         />
 
         
         <div className="hidden md:flex items-center mx-4 text-sm  font-Bold  text-black">
-          <span className="ml-1">{shamsiDate}</span>
+          <span className="ml-3">{shamsiDate}</span>
           <span>|</span>
-          <span className="mr-1">{shamsiTime}</span>
+          <span className="mr-3">{shamsiTime}</span>
         </div>
 
     
-        {isClicked.cart && <Cart />}
-        {isClicked.chat && <Chat />}
-        {isClicked.notification && <Notification />}
+     
         {isClicked.userProfile && <UserProfile />}
         
       </div>
